@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            body {
-                background-color: lightblue; 
-                color: rgb(0, 0, 69); 
-            }
-        </style>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Filter Website</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
 <body>
-    <h1>Welcome to the Book Store Website</h1>
-    <main>Below is a form that will take your preferences in mind and reccomend books from several genres based on your inputs. To begin (Add Instructions later, I imagine some sort of buttons)</main>
-</body>
-</html>
+    <h1>Welcome to the Book Store Page!</h1>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Preference</title>
+
+</head>
+<!-- <body>
+  <h2>Do you prefer Fiction or Nonfiction books?</h2>
+  <button id="fictionBtn">Fiction</button>
+  <button id="nonfictionBtn">Nonfiction</button> -->
+
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Price Dropdown</title>
+  </head>
+  <body>
+  
+
+<!-- Dropdown box that uses book price list to filter optsions -->
+    <label for="price">Select a maximum price:</label>
+    <select id="price" onchange="filterBooks()">
+        <option value="7.50">£7.50</option>
+        <option value="8.99">£8.99</option>
+        <option value="10.11">£10.11</option>
+        <option value="12.10">£12.10</option>
+        <option value="15">£15</option>
+        <option value="20">£20</option>
+        <option value="22">£22</option>
+        <option value="22">£22.50</option>
+        <option value="30">£30</option>
+        <option value="40">£40</option>
+        <option value="60">£60</option>
+    </select>
+
+    <ul id="book-list"></ul>
+
+<!--  Message to show selected price -->
+      <p>Selected Price: <span id="selected-price">£7.50</span></p>
+  
+      <script>
+          function showPrice() {
+              let selectedValue = document.getElementById("price").value;
+              document.getElementById("selected-price").textContent = "£" + selectedValue;
+          }
+      </script>
+  
+  </body>
+    
+  <h1> Use this search bar to look for Author you prefer</h1>
+  <label for="author-input">Filter by Author:</label>
+  <input type="text" id="author-input">
+  <button id="filterAuthor">Filter Author</button>
+  <ul id="author-list">
+      <p type="text" id="updatedList"></p>
+
+
+      
+  <h2> Use this search bar to look for genres you prefer</h2>
+    <label for="genre-input">Filter by Genre:</label>
+    <input type="text" id="genre-input">
+    <button id="filterGenre">Filter Genre</button>
+    <ul id="genre-list">
+        <p type="text" id="updatedList"></p>    
+    </ul>
+    <!--  Message to show selected price -->
+    <p>Selected Books: <span id="updatedList"></span></p>
+  
+    <script src="app.js"></script>
